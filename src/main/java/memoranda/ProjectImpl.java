@@ -75,44 +75,13 @@ public class ProjectImpl implements Project {
      * @see main.java.memoranda.Project#getStatus()
      */
     public int getStatus() {
-        if (isFrozen())
-            return Project.FROZEN;
-        CalendarDate today = CurrentDate.get();
-        CalendarDate prStart = getStartDate();
-        CalendarDate prEnd = getEndDate();
-        if (prEnd == null) {
-            if (today.before(prStart))
-                return Project.SCHEDULED;
-            else
-                return Project.ACTIVE;                
-        }    
-        if (today.inPeriod(prStart, prEnd))
-            return Project.ACTIVE;
-        else if (today.after(prEnd)) {
-            //if (getProgress() == 100)
-                return Project.COMPLETED;
-            /*else
-                return Project.FAILED;*/
-        }
-        else
-            return Project.SCHEDULED;
+        return 0;
     }
 
     private boolean isFrozen() {
+    	// TASK 1: Reduce Complexity
         return _root.getAttribute("frozen") != null;
     }
-
-   
-    /*public int getProgress() {
-        Vector v = getAllTasks();
-        if (v.size() == 0) return 0;
-        int p = 0;
-        for (Enumeration en = v.elements(); en.hasMoreElements();) {
-          Task t = (Task) en.nextElement();
-          p += t.getProgress();
-        }
-        return (p*100)/(v.size()*100);
-    }*/
   
     
     /**

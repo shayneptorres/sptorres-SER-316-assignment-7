@@ -34,8 +34,10 @@ public class History {
     static Object prev = null;     
     
     public static void add(HistoryItem item) {
-        if (prev != null)   
-            if (item.equals(prev)) return;
+        if (prev != null && item.equals(prev)) {
+        	return;
+        }   
+
         if (p < _list.size() - 1)
             _list.setSize(p + 1);
         _list.add(item);
