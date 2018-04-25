@@ -150,23 +150,4 @@ public class ProjectImpl implements IProject {
             desc.appendChild(s);    	
     	}
     }
-        
-    /**
-     * @see net.sf.memoranda.Project#getTaskList()
-     */
-    /*public TaskList getTaskList() {
-        return CurrentStorage.get().openTaskList(this);
-    }*/
-    /**
-     * @see net.sf.memoranda.Project#getNoteList()
-     */
-    /*public NoteList getNoteList() {
-        return CurrentStorage.get().openNoteList(this);
-    }*/
-    /**
-     * @see net.sf.memoranda.Project#getResourcesList()
-     */
-    /*public ResourcesList getResourcesList() {
-        return CurrentStorage.get().openResourcesList(this);
-    }*/
 }

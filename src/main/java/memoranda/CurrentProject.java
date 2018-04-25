@@ -107,7 +107,7 @@ public class CurrentProject {
     private static void notifyListenersBefore(IProject project, INoteList nl, ITaskList tl, IResourcesList rl) {
         for (int i = 0; i < projectListeners.size(); i++) {
             ((IProjectListener)projectListeners.get(i)).projectChange(project, nl, tl, rl);
-            /*DEBUGSystem.out.println(projectListeners.get(i));*/
+            // TASK 2-1 SMELL WITHIN A CLASS
         }
     }
     

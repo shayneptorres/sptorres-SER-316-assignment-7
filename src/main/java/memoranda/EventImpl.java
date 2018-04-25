@@ -116,12 +116,7 @@ public class EventImpl implements IEvent, Comparable {
      * @see main.java.memoranda.interfaces.IEvent#getTime()
      */
     public Date getTime() {
-    	//Deprecated methods
-		//Date d = new Date();
-		//d.setHours(getHour());
-		//d.setMinutes(getMinute());
-		//d.setSeconds(0);
-		//End deprecated methods
+    	//TASK 2-1 SMELL WITHIN A CLASS
 
 		Date d = new Date(); //Revision to fix deprecated methods (jcscoobyrs) 12-NOV-2003 14:26:00
 		Calendar calendar = new GregorianCalendar(Local.getCurrentLocale()); //Revision to fix deprecated methods (jcscoobyrs) 12-NOV-2003 14:26:00

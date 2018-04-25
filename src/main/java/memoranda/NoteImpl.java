@@ -39,7 +39,7 @@ public class NoteImpl implements INote, Comparable {
 		Element month = (Element)day.getParent();
 		Element year = (Element)month.getParent();
 
-     //   return new CalendarDate(day.getAttribute("date").getValue());
+		// TASK 2-1 SMELL WITHIN A CLASS
 		
 		return new CalendarDate(new Integer(day.getAttribute("day").getValue()).intValue(), 
 								new Integer(month.getAttribute("month").getValue()).intValue(),
